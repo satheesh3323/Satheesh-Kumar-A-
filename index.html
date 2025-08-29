@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="view report" content="width=device-width, initial-scale=1.0" />
+  <title>SATHEESH KUMAR .A• Portfolio</title>
+  <style>
+    :root{
+      --bg:#0b0d1a;
+      --card:#15182a;
+      --muted:#b0b7d1;
+      --text:#f3f3f7;
+      --accent:#8a2be2; /* Purple */
+      --accent-2:#ff69b4; /* Hot pink */
+      --ring:0 0 0 3px rgba(138,43,226,.35);
+      --radius:20px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; color:var(--text);
+      background:
+        radial-gradient(1200px 600px at -10% -20%, #311b92 0%, transparent 60%),
+        radial-gradient(1000px 600px at 110% 0%, #1a237e 0%, transparent 60%),
+        linear-gradient(180deg,#0d0d1a 0%, #0b0d14 100%);
+      background-attachment:fixed;
+    }
+    .container{max-width:1100px;margin:28px auto;padding:0 18px}
+
+    /* Header */
+    .hero{background:linear-gradient(135deg,rgba(138,43,226,.2),rgba(255,105,180,.15));
+      border:1px solid rgba(255,255,255,.06); border-radius:var(--radius); padding:22px 22px 26px; box-shadow:0 20px 60px rgba(0,0,0,.35)}
+    .hero-row{display:flex;gap:18px;align-items:center}
+    .avatar{width:74px;height:74px;border-radius:50%;overflow:hidden;border:3px solid var(--accent)}
+    .avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+    .name{font-size:30px;font-weight:800;margin:0}
+    .tagline{margin:6px 0 0;color:var(--muted);font-weight:500}
+
+    /* Tabs */
+    .tabs{display:flex;gap:12px;margin:18px 0 0;flex-wrap:wrap}
+    .tab-btn{cursor:pointer;padding:10px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);color:#fff;font-weight:600;letter-spacing:.2px;transition:.2s}
+    .tab-btn:hover{transform:translateY(-1px);box-shadow:var(--ring)}
+    .tab-btn.active{background:linear-gradient(135deg,rgba(138,43,226,.35),rgba(255,105,180,.25));}
+
+    /* Cards */
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:20px 20px;box-shadow:0 10px 40px rgba(0,0,0,.35);margin-top:16px}
+    .section-title{font-size:20px;margin:0 0 12px;font-weight:800}
+
+    /* Bio grid */
+    .bio-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .bio-row{display:grid;grid-template-columns:180px 1fr;gap:14px;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.07)}
+    .bio-label{color:var(--muted);font-weight:600}
+    .bio-value{font-weight:700}
+    .objective{grid-column:1/-1}
+
+    /* Lists */
+    .list{display:grid;gap:10px;margin:0;padding-left:18px}
+    .list li{margin:0 0 4px}
+
+    /* Pills */
+    .pill{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);font-weight:600;margin:6px 6px 0 0}
+
+    /* Footer */
+    footer{color:#bdbde4;text-align:center;margin:26px 0 10px;font-size:14px}
+
+    @media (max-width:820px){
+      .bio-grid{grid-template-columns:1fr}
+      .bio-row{grid-template-columns:140px 1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header / Hero -->
+    <section class="hero">
+      <div class="hero-row">
+        <div class="avatar"><img src="https://postimg.cc/14N5NxQF" alt="https://postimg.cc/14N5NxQF"></div>
+        <div>
+          <h1 class="name">SATHEESH KUMAR  A</h1>
+          <p class="tagline">BSC Student • Passionate Learner & Tech Enthusiast</p>
+        </div>
+      </div>
+
+      <nav class="tabs" role="tablist" aria-label="Sections">
+        <button class="tab-btn active" data-tab="about">About</button>
+        <button class="tab-btn" data-tab="education">Educational Qualification</button>
+        <button class="tab-btn" data-tab="skills">Extra Skills</button>
+        <button class="tab-btn" data-tab="activities">Extra Curricular Activities</button>
+        <button class="tab-btn" data-tab="biodata">Bio Data</button>
+      </nav>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="card tab-panel">
+      <h2 class="section-title">About</h2>
+      <p style="line-height:1.7;color:#e6e6f5">Hello! I'm <strong>Satheesh kumar</strong>. I'm currently pursuing <strong>BSC CS</strong> and I am passionate about coding, technology, and problem-solving. My interests include programming in multiple languages and exploring new innovations in IT.</p>
+      <div style="margin-top:10px">
+        <span class="pill">C</span>
+        <span class="pill">C++</span>
+        <span class="pill">Java</span>
+        <span class="pill">Python</span>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="card tab-panel" hidden>
+      <h2 class="section-title">Educational Qualification</h2>
+      <ul class="list">
+        <li><strong>10th Government  Higher Secondary School,Ganapathy palaiyam , Tiruppur District</strong></li>
+        <li><strong>12th Government  Higher Secondary School,Ganapathy palaiyam ,  Tiruppur District</strong></li>
+        <li><strong>BSC – Bachelor of Computer Science </strong><br>Chikkanna Government Arts College, Tirupur (2nd Year)</li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="card tab-panel" hidden>
+      <h2 class="section-title">Extra Skills</h2>
+      <ul class="list">
+        <li>Programming: C, C++, Java, Python</li>
+        <li>Soft Skills: Communication, Teamwork, Problem Solving</li>
+        <li>Languages: English, Tamil</li>
+      </ul>
+    </section>
+
+    <!-- Activities -->
+    <section id="activities" class="card tab-panel" hidden>
+      <h2 class="section-title">Extra Curricular Activities</h2>
+      <ul class="list">
+        <li>playing 🏇🏻</li>
+        <li>Drawing 🎨</li>
+       
+        <li>playing kabaddi 🧎🏻</li>
+        <li>Driving 🏎️ </li>
+      </ul>
+    </section>
+
+    <!-- Bio Data -->
+    <section id="biodata" class="card tab-panel" hidden>
+      <h2 class="section-title">Bio Data</h2>
+      <div class="bio-grid">
+        <div class="bio-row"><div class="bio-label">Name</div><div class="bio-value">SATHEESH KUMAR A</div></div>
+        <div class="bio-row"><div class="bio-label">Date of Birth</div><div class="bio-value">22 APRIL  2007</div></div>
+
+        <div class="bio-row"><div class="bio-label">Address</div><div class="bio-value">7/252 ,Ayyavu nagar , Chennimalai palaiyam, Tiruppur - 641605</div></div>
+        <div class="bio-row"><div class="bio-label">Contact Number</div><div class="bio-value">9095505530</div></div>
+
+        <div class="bio-row"><div class="bio-label">Email</div><div class="bio-value">satheesh3323@gmail.com</div></div>
+        <div class="bio-row"><div class="bio-label">Father's Name</div><div class="bio-value">ANANDHAN. S</div></div>
+
+        <div class="bio-row"><div class="bio-label">Mother's Name</div><div class="bio-value">DEVI . A</div></div>
+        <div class="bio-row objective"><div class="bio-label">Objective</div><div class="bio-value">To explore opportunities where I can apply my creativity and computer knowledge, while continuously learning and contributing to the success of my team and organization.</div></div>
+      </div>
+    </section>
+
+    <footer>© <span id="year"></span> Satheesh kumar A • Built with ❤</footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const tabs = Array.from(document.querySelectorAll('.tab-btn'));
+    const panels = Array.from(document.querySelectorAll('.tab-panel'));
+    function activate(id){
+      tabs.forEach(b=>b.classList.toggle('active', b.dataset.tab===id));
+      panels.forEach(p=>p.hidden = p.id!==id);
+    }
+    tabs.forEach(btn=>{
+      btn.addEventListener('click', ()=>activate(btn.dataset.tab));
+    });
+  </script>
+</body>
+</html>
